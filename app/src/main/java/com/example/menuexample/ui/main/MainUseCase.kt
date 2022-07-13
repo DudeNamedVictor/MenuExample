@@ -15,6 +15,14 @@ class MainUseCase {
             MainPageItem(
                 "", "Супы", "Плохая идея"),
             MainPageItem(
+                "", "Вина", "Лучше коктейли"),
+            MainPageItem(
+                "", "Супы", "Плохая идея"),
+            MainPageItem(
+                "", "Вина", "Лучше коктейли"),
+            MainPageItem(
+                "", "Супы", "Плохая идея"),
+            MainPageItem(
                 "", "Вина", "Лучше коктейли")
         )
     }
