@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.menuexample.ui.main.MainFragment"
+        android:label="@string/home_menu" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.menuexample.ui.selected.SelectedFragment"
+        android:label="@string/selected" />
+</navigation>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Menu Example</string>
+    <string name="home_menu">Меню</string>
+    <string name="selected">Заказ</string>
 </resources>
