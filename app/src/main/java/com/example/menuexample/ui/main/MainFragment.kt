@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -32,7 +33,14 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
         viewModel?.text?.observe(viewLifecycleOwner, {
-            binding.recyclerView.adapter = MainAdapter(it)
+            binding.recyclerView.adapter = MainAdapter(
+                it,
+                object: MainAdapter.OnMainItemClick {
+                    override fun onMainItemClick(position: Int) {
+                        Toast.makeText(context, position.toString(), Toast.LENGTH_SHORT).show()
+                    }
+                }
+            )
         })
     }
 
