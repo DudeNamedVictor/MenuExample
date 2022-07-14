@@ -9,11 +9,11 @@ import com.example.menuexample.data.MainPageItem
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val _textMLD = MutableLiveData<List<MainPageItem>>()
-    val text: LiveData<List<MainPageItem>> = _textMLD
+    private val _mainDataMLD = MutableLiveData<List<MainPageItem>>()
+    val mainDataMLD: LiveData<List<MainPageItem>> = _mainDataMLD
 
     init {
-        _textMLD.value = MainUseCase().provide()
+        _mainDataMLD.value = MainUseCase().getData()
     }
 
 }

@@ -35,7 +35,7 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
-        viewModel?.text?.observe(viewLifecycleOwner, {
+        viewModel?.mainDataMLD?.observe(viewLifecycleOwner, {
             binding.recyclerView.adapter = MainAdapter(
                 it,
                 object : MainAdapter.OnMainItemClick {
